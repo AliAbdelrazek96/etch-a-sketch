@@ -12,7 +12,6 @@
   
   .grid-item {
 
-    flex-basis: 6.25%; /* Each item takes 6.25% of the container's width */
     height: 50px; /* Adjust height as needed */
     border: 1px solid #000; /* Optional: Adds borders to the grid items */
 

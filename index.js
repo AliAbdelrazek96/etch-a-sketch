@@ -7,7 +7,7 @@ parentDiv.classList.add('parent-div');
 body.appendChild(parentDiv)
 
 
-
+//create popup
 const openPopupButton = document.getElementById('openPopup');
 
 openPopupButton.addEventListener('click', function() {
@@ -22,17 +22,23 @@ openPopupButton.addEventListener('click', function() {
  }
 
  let gridItemWidth = 100/gridSize + '%';
-let gridItemHeight = 100/gridSize + '%';
     // add grid items with a for loop
    //use a for loop to create 256 grid items! (16 x 16)
 for (let i = 1; i <= gridSize * gridSize; i++) {
     const gridItem = document.createElement('div') // create a new div with each iteration
     gridItem.classList.add('grid-item');
     gridItem.style.flexBasis = gridItemWidth;
+    //the height is fixed at 50px; but the width is 
+    //gunna use the flexbox minimum flexbasis of gridItemWidth
+    //which is 100 / desired gridsize
     parentDiv.appendChild(gridItem);
+    //change background color when a div is clicked
+    gridItem.addEventListener('click', function() {
+        gridItem.style.backgroundColor = 'red'
+    })
+
 }
 
-
-
 })
+
 
