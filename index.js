@@ -33,7 +33,7 @@ for (let i = 1; i <= gridSize * gridSize; i++) {
     //which is 100 / desired gridsize
     parentDiv.appendChild(gridItem);
     //change background color when a div is clicked
-    gridItem.addEventListener('click', function() {
+    gridItem.addEventListener('mouseout', function() {
         gridItem.style.backgroundColor = generateRandomColor();
     })
 
