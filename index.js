@@ -34,11 +34,21 @@ for (let i = 1; i <= gridSize * gridSize; i++) {
     parentDiv.appendChild(gridItem);
     //change background color when a div is clicked
     gridItem.addEventListener('click', function() {
-        gridItem.style.backgroundColor = 'red'
+        gridItem.style.backgroundColor = generateRandomColor();
     })
 
 }
 
 })
+
+
+function generateRandomColor() {
+    //generate random RGB values
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  const color = `rgb(${red}, ${green}, ${blue})`;
+  return color;
+}
 
 
